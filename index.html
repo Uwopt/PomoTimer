@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jaidyn">
+    <meta name="description" content="Pomodoro Timer">
+    <title>PomoTimer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="h1"> PomoTimer <br>&nbsp; by Jaidyn Rose</h1>
+        <button class="h1_task" onclick="openPopupTask()">Tasks</button>
+        <div id="todo_app">
+            <div id="popup_main_task">
+                <h2 id="h2">To-Do List</h2>
+                <div class="row">
+                    <input type="text" id="input_box" placeholder="Add your text">
+                    <button class="add" onclick="addTask()">ADD</button>
+                    <div id="close_popup_task" title="Close this popup menu" onclick="closePopupTask()">
+                        <p>X</p>
+                    </div>
+                </div>
+                <ul id="list_container"></ul>
+            </div>
+        </div>
+    </header>
+    <div>
+        <iframe class="player" width="400" height="400" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/704527529/favorites&amp;show_artwork=false&color=FF0000&show_playcount=false&buying=false&sharing=false&auto_play=false&download_false">
+        </iframe>
+    </div>
+    <main>
+        <div class="container">
+            <div class="timer">
+                <div class="button_container">
+                    <button class="button" id="pomodoro_session">Pomodoro</button>
+                    <button class="button" id="short_break">Short Break</button>
+                    <button class="button" id="long_break">Long break</button>
+                </div>
+
+                <div id="pomodoro_timer" class="timer_display">
+                    25:00
+                </div>
+
+                <div id="short_timer" class="timer_display">
+                    5:00
+                </div>
+
+                <div id="long_timer" class="timer_display">
+                    10:00
+                </div>
+
+                <div id="buttons">
+                    <button id="start" onclick="start()">START</button>
+                    <button id="stop" onclick="stop()">STOP</button>
+                    <button id="reset" onclick="reset()">RESET</button>
+                    <button id="setting" onclick="openPopupMenu()">SETTINGS</button>
+                </div>
+            </div>
+        </div>
+        <div id="popup_bg">
+            <div id="popup_main_div">
+                <p id="settings_div">Settings</p>
+                <div class="settings">
+                    <button class="navlink">General</button><br>
+                    <button class="navlink">Timers</button><br>
+                    <button class="navlink">Alarm</button><br>
+                </div>
+                <div id="close_popup_div" title="Close this popup menu." onclick="closePopupMenu()">
+                    <p>X</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>
+            <span class="nowrap">&copy;&nbsp;Copyright&nbsp;<time id="year">2025</time></span>
+            <span class="nowrap">All Rights Reserved</span>
+        </p>
+
+    </footer>
+</body>
+
+</html>
