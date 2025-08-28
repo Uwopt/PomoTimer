@@ -220,6 +220,26 @@ document.querySelectorAll(".navlink").forEach((btn) => {
   });
 });
 
+// ALARM
+
+const select = document.getElementById("alarm_select");
+const audio = document.getElementById("alarm_audio");
+
+const alarmSounds = {
+  alarm1: "menu.mp3",
+  alarm2: "brawl.mp3",
+  alarm3: "brawl2.mp3",
+  alarm4: "fileselect.mp3"
+};
+
+select.addEventListener("change", function () {
+  const selectedValue = this.value;
+  if (alarmSounds[selectedValue]) {
+    audio.src = alarmSounds[selectedValue];
+    audio.play();
+  }
+});
+
 // TO-DO LIST
 
 // POPUP TASKS
