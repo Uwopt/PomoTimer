@@ -45,7 +45,7 @@
                 <div class="button_container">
                     <button class="button" id="pomodoro_session">Pomodoro</button>
                     <button class="button" id="short_break">Short Break</button>
-                    <button class="button" id="long_break">Long break</button>
+                    <button class="button" id="long_break">Long Break</button>
                 </div>
 
                 <div id="pomodoro_timer" class="timer_display">
@@ -93,21 +93,23 @@
                         <section id="timers" class="setting_section" style="display: none;">
                             <label for="timers_select">Select time:</label>
                             <select name="timers" class="background">
-                                <option value="timer1">Timer 1</option>
-                                <option value="timer2">Timer 2</option>
-                                <option value="timer3">Timer 3</option>
+                                <input type="number" min="0" step="1" value="25"> Pomodoro</input>
+                                <input type="number" min="0" step="1" value="5"> Short Break</input>
+                                <input type="number" min="0" step="1" value="10"> Long Break</input>
                             </select>
                         </section>
 
                         <section id="alarm" class="setting_section" style="display: none;">
                             <label for="alarm_select">Select alarms:</label>
-                            <select name="alarm" class="background">
+                            <select name="alarm" id="alarm_select" class="background">
                                 <option value="alarm1">Alarm 1</option>
                                 <option value="alarm2">Alarm 2</option>
                                 <option value="alarm3">Alarm 3</option>
                                 <option value="alarm4">Alarm 4</option>
+                                <audio id="alarm_audio" preload="auto"></audio>
                             </select>
                         </section>
+
                     </div>
                 </div>
 
