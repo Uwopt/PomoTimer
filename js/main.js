@@ -172,6 +172,8 @@ function closePopupMenu() {
 //   }
 // }
 
+// SELECT BACKGROUND
+
 const backgroundSelect = document.getElementById("background");
 
 backgroundSelect.addEventListener("change", function () {
@@ -187,7 +189,6 @@ backgroundSelect.addEventListener("change", function () {
   const selected = this.value;
   document.body.classList.add(selected);
 
-  // Optional: Save preference to localStorage
   localStorage.setItem("selectedBackground", selected);
 });
 
