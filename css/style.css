@@ -58,11 +58,22 @@ body {
 }
 
 body.background1 {
-    background: url(/img/1.jpg) no-repeat center center fixed;
+    background: url(/img/1.png) no-repeat center center fixed;
     background-size: cover;
 }
+
 body.background2 {
     background: url(/img/2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.background3 {
+    background: url(/img/3.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.background4 {
+    background: url(/img/4.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -381,6 +392,7 @@ body.background2 {
     padding: 0.25em;
     left: 15px;
     top: 15px;
+    background-color: gold;
 }
 
 .h1_task {
@@ -393,6 +405,7 @@ body.background2 {
     right: 15px;
     top: 15px;
     bottom: 20x;
+    background-color: gold;
 }
 
 .h1_task:hover {
