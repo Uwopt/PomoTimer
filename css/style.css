@@ -164,6 +164,7 @@ body.background4 {
     cursor: pointer;
 }
 
+.background,
 #background {
     color: #000000;
     font-family: var(--FF);
@@ -181,6 +182,23 @@ body.background4 {
     padding: 10px 20px;
     margin: 5px;
     background-color: gold;
+}
+
+.settings_wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.settings_nav {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.settings_content {
+    flex-grow: 1;
 }
 
 /* TASK */
