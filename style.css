@@ -83,7 +83,6 @@ body {
     width: 450px;
     height: 410px;
     border: 2px solid black;
-    border-radius: 5px;
     background-color: white;
     top: 50%;
     left: 50%;
@@ -114,9 +113,12 @@ body {
 #settings_div {
     text-align: center;
     font-family: var(--FF);
+    color: #002765;
     font-weight: bold;
     font-size: 20px;
-    padding-top: 1%;
+    padding: 10px 30px 10px 30px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .navlink {
@@ -133,6 +135,33 @@ body {
     cursor: pointer;
 }
 
+#general {
+    color: #000000;
+    font-family: var(--FF);
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#background {
+    color: #000000;
+    font-family: var(--FF);
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+
+.setting_section {
+    color: #000000;
+    font-family: var(--FF);
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: gold;
+}
+
 /* TASK */
 
 #popup_main_task {
@@ -140,7 +169,7 @@ body {
     width: 450px;
     height: 410px;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: white;
     top: 50%;
     left: 50%;
@@ -160,8 +189,8 @@ body {
     border-radius: 25px;
     border: 2px solid black;
     text-align: center;
-    right: 5px;
-    top: 5px;
+    right: 7px;
+    top: 7px;
     cursor: pointer;
 }
 
@@ -330,7 +359,7 @@ body {
 
 #todo_app {
     position: absolute;
-    top: 48rem;
+    top: 74vh;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
@@ -351,7 +380,7 @@ body {
     width: 450px;
     height: auto;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: white;
     top: 50%;
     left: 50%;
@@ -361,9 +390,11 @@ body {
 }
 
 #h2 {
+    text-align: center;
     font-family: var(--FF);
     color: #002765;
-    display: flex;
+    font-weight: bold;
+    font-size: 20px;
     padding: 10px 30px 10px 30px;
     align-items: center;
     margin-bottom: 20px;
@@ -415,6 +446,7 @@ ul li::before {
     width: 28px;
     border-radius: 50%;
     background-image: url(/img/unchecked.png);
+
     background-size: cover;
     background-position: center;
     top: 50%;
