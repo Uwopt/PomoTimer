@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jaidyn">
+    <meta name="author" content="Jaidyn Rose">
     <meta name="description" content="Pomodoro Timer">
     <title>PomoTimer</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -21,7 +21,7 @@
         <button class="h1_task" onclick="openPopupTask()">Tasks</button>
         <div id="todo_app">
             <div id="popup_main_task">
-                <h2 id="h2">To-Do List</h2>
+                <p id="h2">To-Do List</p>
                 <div class="row">
                     <input type="text" id="input_box" placeholder="Add your text">
                     <button class="add" onclick="addTask()">ADD</button>
@@ -70,11 +70,29 @@
         <div id="popup_bg">
             <div id="popup_main_div">
                 <p id="settings_div">Settings</p>
-                <div class="settings">
-                    <button class="navlink">General</button><br>
-                    <button class="navlink">Timers</button><br>
-                    <button class="navlink">Alarm</button><br>
-                </div>
+
+                <nav class="settings">
+                    <button class="navlink" data-selection="general">General</button><br>
+                    <button class="navlink" data-selection="timers">Timers</button><br>
+                    <button class="navlink" data-selection="alarm">Alarm</button><br>
+                </nav>
+
+                <section id="general" class="setting_section">
+                    <label for="background_select">Select background:</label>
+                    <select name="background" id="background">
+                        <option value="background1">Background 1</option>
+                        <option value="background2">Background 2</option>
+                    </select>
+                </section>
+
+                <section id="timers" class="setting_section">
+                    <p>Select Time</p>
+                </section>
+                <section id="alarm" class="setting_section">
+                    <p>Select Alarm </p>
+                    <audio controls loop src="test.mp3" type="audio/mpeg"></audio>
+                </section>
+
                 <div id="close_popup_div" title="Close this popup menu." onclick="closePopupMenu()">
                     <p>X</p>
                 </div>
