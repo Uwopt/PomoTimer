@@ -201,6 +201,25 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Hide all setting except selected
+
+document.querySelectorAll(".navlink").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const selected = btn.dataset.selection;
+
+    // Hide all sections
+    document.querySelectorAll(".setting_section").forEach((section) => {
+      section.style.display = "none";
+    });
+
+    // Show selected section
+    const selectedSection = document.getElementById(selected);
+    if (selectedSection) {
+      selectedSection.style.display = "block";
+    }
+  });
+});
+
 // TO-DO LIST
 
 // POPUP TASKS
@@ -266,7 +285,7 @@ function clearTask() {
   saveData();
 }
 
-// DRAGGABLE TASK Commented out sjust to test functionality before fixing
+// DRAGGABLE TASK Commented out just to test functionality before fixing
 
 // dragElement(document.getElementById("todo_app"));
 
