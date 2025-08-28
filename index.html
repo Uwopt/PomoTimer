@@ -72,29 +72,45 @@
             <div id="popup_main_div">
                 <p id="settings_div">Settings</p>
 
-                <nav class="settings">
-                    <button class="navlink" data-selection="general">General</button><br>
-                    <button class="navlink" data-selection="timers">Timers</button><br>
-                    <button class="navlink" data-selection="alarm">Alarm</button><br>
-                </nav>
+                <div class="settings_wrapper">
+                    <nav class="settings_nav">
+                        <button class="navlink" data-selection="general">General</button><br>
+                        <button class="navlink" data-selection="timers">Timers</button><br>
+                        <button class="navlink" data-selection="alarm">Alarm</button><br>
+                    </nav>
 
-                <section id="general" class="setting_section">
-                    <label for="background_select">Select background:</label>
-                    <select name="background" id="background">
-                        <option value="background1">Background 1</option>
-                        <option value="background2">Background 2</option>
-                        <option value="background3">Background 3</option>
-                        <option value="background4">Background 4</option>
-                    </select>
-                </section>
+                    <div class="settings_content">
+                        <section id="general" class="setting_section">
+                            <label for="background_select">Select background:</label>
+                            <select name="background" id="background">
+                                <option value="background1">Background 1</option>
+                                <option value="background2">Background 2</option>
+                                <option value="background3">Background 3</option>
+                                <option value="background4">Background 4</option>
+                            </select>
+                        </section>
 
-                <section id="timers" class="setting_section">
-                    <p>Select Time</p>
-                </section>
-                <section id="alarm" class="setting_section">
-                    <p>Select Alarm </p>
-                    <audio controls loop src="test.mp3" type="audio/mpeg"></audio>
-                </section>
+                        <section id="timers" class="setting_section" style="display: none;">
+                            <label for="timers_select">Select time:</label>
+                            <select name="timers" class="background">
+                                <option value="timer1">Timer 1</option>
+                                <option value="timer2">Timer 2</option>
+                                <option value="timer3">Timer 3</option>
+                            </select>
+                        </section>
+
+                        <section id="alarm" class="setting_section" style="display: none;">
+                            <label for="alarm_select">Select alarms:</label>
+                            <select name="alarm" class="background">
+                                <option value="alarm1">Alarm 1</option>
+                                <option value="alarm2">Alarm 2</option>
+                                <option value="alarm3">Alarm 3</option>
+                                <option value="alarm4">Alarm 4</option>
+                            </select>
+                        </section>
+                    </div>
+                </div>
+
 
                 <div id="close_popup_div" title="Close this popup menu." onclick="closePopupMenu()">
                     <p>X</p>
